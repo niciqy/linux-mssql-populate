@@ -3,6 +3,6 @@ FROM mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 
 
 RUN mkdir -p /tmp/dev
-COPY ./bin /app/bin
+COPY ./bin /opt/niciqy/bin
 
-CMD [ "/app/bin/refresh-db.sh" ]
+CMD [ "/opt/niciqy/bin/refresh-db.sh" ]

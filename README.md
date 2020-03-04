@@ -4,11 +4,11 @@ In development environment, sometimes we want our loacl docker SQL server to boo
 
 This docker image will
 - Start SQL server
-- loads all SQL scripts, in alphabetical order in `/app/sql` folder
+- loads all SQL scripts, in alphabetical order in `/opt/sql` folder
 
 ## Getting Started
 
-There are two ways to use this image. Either way you choose, you will need to set the mounting volume to `/app/sql`. The image will run all `*.sql` files in in alphabetical order.
+There are two ways to use this image. Either way you choose, you will need to set the mounting volume to `/opt/sql`. The image will run all `*.sql` files in in alphabetical order.
 
 #### Docker-compose
 
@@ -21,7 +21,7 @@ services:
         SA_PASSWORD: "Your_password123"
         ACCEPT_EULA: "Y"
     volumes:
-      - /path/to/my/sql/folder:/app/sql
+      - /path/to/my/sql/folder:/opt/sql
 ```
 #### Docker cmd
 
@@ -29,7 +29,7 @@ services:
 docker run  \
   -e ACCEPT_EULA=Y \
   -e SA_PASSWORD=Your_password123 \
-  -v  /path/to/my/sql/folder:/app/sql \
+  -v  /path/to/my/sql/folder:/opt/sql \
   --name amazing_sql \
   niciqy/linux-mssql-populate
   ```

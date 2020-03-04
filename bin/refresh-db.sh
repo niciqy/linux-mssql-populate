@@ -1,6 +1,6 @@
 #!/bin/bash -eu
 
-FILES=`find "/app/sql" -type f  -name '*.sql' | sort -n`
+FILES=`find "/opt/sql" -type f  -name '*.sql' | sort -n`
 
 /opt/mssql/bin/sqlservr &
 
