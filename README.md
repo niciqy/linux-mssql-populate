@@ -1,6 +1,6 @@
 # Linux MsSQL populate DB from scripts
 
-In development environment, sometimes we want our loacl docker SQL server to boot up with tests data. This docker makes it easy by running all `*.sql` scripts in a given folder.
+In development environment, sometimes we want our local docker SQL server to boot up with tests data. This docker makes it easy by running all `*.sql` scripts in a given folder.
 
 This docker image will
 - Start SQL server
