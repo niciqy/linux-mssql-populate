@@ -16,7 +16,7 @@ There are two ways to use this image. Either way you choose, you will need to se
 version: "3.7"
 services:
   db:
-    image: "niciqy/mssql-linux-script-load"
+    image: "niciqy/linux-mssql-populate"
     environment:
         SA_PASSWORD: "Your_password123"
         ACCEPT_EULA: "Y"
@@ -31,5 +31,5 @@ docker run  \
   -e SA_PASSWORD=Your_password123 \
   -v  /path/to/my/sql/folder:/app/sql \
   --name amazing_sql \
-  niciqy/mssql-linux-script-load
+  niciqy/linux-mssql-populate
   ```
